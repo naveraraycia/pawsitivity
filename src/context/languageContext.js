@@ -1,9 +1,8 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 const LanguageContext = createContext()
 
 export const LanguageProvider = ({children}) => {
-  // const [isLoading, setIsLoading] = useState(true)
 
   const english = {
     heroText: {
@@ -57,7 +56,7 @@ export const LanguageProvider = ({children}) => {
   
   const filipino = {
     heroText: {
-        heading: 'Tuklasing and mundo ng',
+        heading: 'Tuklasing ang mundo ng',
         paragraph: 'Naniniwala kami na ang ugnayan sa pagitan ng tao at animals ay nakapagbabago, nagdadala ng kasiyahan, companionship, at di-matatawarang benepisyo sa ating mga buhay. Ang aming website ay nakatuon sa pagbibigay sa iyo ng kaalaman, kagamitan, at inspirasyon upang makabuo ng masaya, maayos, at payapang buhay kasama ang iyong mga minamahal na pets.'
     },
     informationText: {
@@ -69,7 +68,7 @@ export const LanguageProvider = ({children}) => {
         paragraph: 'Alamin kung anong mga activities at interactions na makakapagbigay sayo at sa iyong pet ng kasiyahan at relaxation, at gawin itong regular na parte ng iyong routine para epektibong maibsan ang iyong stress at maipagpatatag ang bond ng iyong pet.'
     },
     tipsText: {
-        heading: 'Sundan ang mga tips...',
+        heading: 'Sundan ang tips...',
         tips: [
           {
             title: 'Praktisin ang Deep Breathing kasama ang iyong pet',

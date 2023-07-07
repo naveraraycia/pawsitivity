@@ -1,27 +1,25 @@
 import { useRef, useContext } from "react";
-import { LanguageProvider } from "./context/languageProvider";
-import LanguageContext from "./context/languageProvider";
+import LanguageContext from "./context/languageContext";
 import Navbar from "./components/Navbar";
-import heroImg from './assets/imgs/hero-svg.svg'
-import kittens from './assets/imgs/kitten-svg.svg'
-import dogOcean from './assets/imgs/dog-landscape.jpg'
 import Tips from "./components/Tips";
 import Footer from "./components/Footer";
 import Heading from "./components/Heading";
 import Button from "./components/Button";
 import Information from "./components/Information";
 import FixedLanguageBtn from "./components/FixedLanguageBtn";
+import heroImg from './assets/imgs/hero-svg.svg'
+import kittens from './assets/imgs/kitten-svg.svg'
+import dogOcean from './assets/imgs/dog-landscape.jpg'
 
 function App() {
   const elementRef = useRef(null)
   const scrollToElement = () => elementRef.current.scrollIntoView()
 
-  const {content, changeToEnglish, changeToFilipino} = useContext(LanguageContext);
+  const {content} = useContext(LanguageContext);
 
   const heroTopText = content.heroText.heading.split(' ')[0]
   let heroRemainingText = content.heroText.heading.split(' ')
   heroRemainingText.shift()
-  
   heroRemainingText = `${heroRemainingText[0]} ${heroRemainingText[1]} ${heroRemainingText[2]}`
   
   return (
@@ -56,18 +54,14 @@ function App() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------- */}
-
       <section id="information" className="bg-lighter-pink">
         <div className="text-center py-32 mx-12 md:mx-40">
           <Heading text={content.informationText.heading} size={'4xl'} smEnabled={true} smSize={'5xl'} highlight={'blue'} />
 
           <Information />
-   
+
         </div>
       </section>
-
-      {/* ---------------------------------------------------------- */}
 
       <section id="banner" className="bg-lavender">
         <div className="py-32 font-sans text-slate mx-12 md:mx-40 flex justify-between items-center">
@@ -83,8 +77,6 @@ function App() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------- */}
-
       <section id="tips" className="bg-lighter-pink">
         <div ref={elementRef} className="py-32 font-sans flex flex-col items-center text-slate mx-12 md:mx-40">
 
@@ -94,8 +86,6 @@ function App() {
 
         </div>
       </section>
-
-      {/* ---------------------------------------------------------- */}
 
       <section id="bond" className="bg-pastel-yellow">
         <div className="flex flex-col font-sans text-slate py-32 px-12 space-y-10 justify-center items-center lg:flex-row  lg:space-y-0 lg:space-x-20">

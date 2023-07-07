@@ -1,10 +1,10 @@
+import { useContext } from 'react'
+import LanguageContext from '../context/languageContext'
 import Card from './Card'
 import gingerCat from '../assets/imgs/ginger-cat.jpg'
 import blueCat from '../assets/imgs/cat-blue.jpg'
 import pug from '../assets/imgs/pug.jpg'
 import greenDog from '../assets/imgs/green-dog.jpg'
-import { useContext } from 'react'
-import LanguageContext from '../context/languageProvider'
 
 function Information() {
   const {content} = useContext(LanguageContext)

@@ -1,6 +1,6 @@
-import Card from "./Card"
 import { useContext } from "react"
-import LanguageContext from "../context/languageProvider"
+import LanguageContext from "../context/languageContext"
+import Card from "./Card"
 
 function Tips() {
   const {content} = useContext(LanguageContext)
