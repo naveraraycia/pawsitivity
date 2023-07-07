@@ -1,4 +1,6 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import { LanguageProvider } from "./context/languageProvider";
+import LanguageContext from "./context/languageProvider";
 import Navbar from "./components/Navbar";
 import heroImg from './assets/imgs/hero-svg.svg'
 import kittens from './assets/imgs/kitten-svg.svg'
@@ -14,9 +16,16 @@ function App() {
   const elementRef = useRef(null)
   const scrollToElement = () => elementRef.current.scrollIntoView()
 
+  const {content, changeToEnglish, changeToFilipino} = useContext(LanguageContext);
+
+  const heroTopText = content.heroText.heading.split(' ')[0]
+  let heroRemainingText = content.heroText.heading.split(' ')
+  heroRemainingText.shift()
+  
+  heroRemainingText = `${heroRemainingText[0]} ${heroRemainingText[1]} ${heroRemainingText[2]}`
+  
   return (
     <>
-
       <FixedLanguageBtn />
       <section id="hero" className="bg-sky">
         <Navbar />
@@ -26,15 +35,15 @@ function App() {
             <div className="space-y-8 md:space-y-10">
               <div className="space-y-3">
                 <div className="font-bold text-4xl text-sky-darker md:text-5xl md:space-y-1">
-                  <h2>Discover</h2>
-                  <h2>the world of</h2>
+                  <h2>{heroTopText}</h2>
+                  <h2>{heroRemainingText}</h2>
                 </div>
 
                 <Heading text={'pawsitivity'} size={'5xl'} mdEnabled={true} mdSize={'6xl'} />
                 
               </div>
 
-              <p className="font-light text-slate max-w-lg text-md md:text-lg">We believe that the bond between humans and animals is transformative, bringing joy, companionship, and immeasurable benefits to our lives. Our website is dedicated to providing you with the knowledge, tools, and inspiration to create a happy, healthy, and harmonious life with your beloved pets.</p>
+              <p className="font-light text-slate max-w-lg text-md md:text-lg">{content.heroText.paragraph}</p>
 
               <div onClick={scrollToElement} className="w-fit">
                 <Button color="yellow">learn more</Button>
@@ -51,7 +60,7 @@ function App() {
 
       <section id="information" className="bg-lighter-pink">
         <div className="text-center py-32 mx-12 md:mx-40">
-          <Heading text={'do you know?'} size={'4xl'} smEnabled={true} smSize={'5xl'} highlight={'blue'} />
+          <Heading text={content.informationText.heading} size={'4xl'} smEnabled={true} smSize={'5xl'} highlight={'blue'} />
 
           <Information />
    
@@ -64,9 +73,9 @@ function App() {
         <div className="py-32 font-sans text-slate mx-12 md:mx-40 flex justify-between items-center">
           <div className="space-y-10">
 
-            <Heading text={'stress relieving with pets'} highlight={'pink'} size={'2xl'} smEnabled={true} smSize={'4xl'} />
+            <Heading text={content.bannerText.heading} highlight={'pink'} size={'2xl'} smEnabled={true} smSize={'4xl'} />
 
-            <p className="font-light max-w-lg text-md md:text-lg">Find what activities and interactions bring both you and your pet the most joy and relaxation, and make them a regular part of your routine to effectively relieve stress and strengthen your bond.</p>
+            <p className="font-light max-w-lg text-md md:text-lg">{content.bannerText.paragraph}</p>
           </div>
 
           <img src={kittens} alt="kittens" className="hidden lg:w-[300px] lg:block xl:w-[350px]" />
@@ -79,7 +88,7 @@ function App() {
       <section id="tips" className="bg-lighter-pink">
         <div ref={elementRef} className="py-32 font-sans flex flex-col items-center text-slate mx-12 md:mx-40">
 
-          <Heading text={'follow these tips...'} size={'3xl'} smEnabled={true} smSize={'4xl'} highlight={'lavender'} />
+          <Heading text={content.tipsText.heading} size={'3xl'} smEnabled={true} smSize={'4xl'} highlight={'lavender'} />
        
           <Tips />
 
@@ -95,9 +104,9 @@ function App() {
           <div className="flex flex-col space-y-16">
             <div className="space-y-7">
 
-              <Heading text={'our bond matters'} smEnabled={true} smSize={'4xl'} size={'3xl'} highlight={'blue'} />
+              <Heading text={content.bondText.heading} smEnabled={true} smSize={'4xl'} size={'3xl'} highlight={'blue'} />
 
-              <p className="font-light leading-7 lg:max-w-lg">Remember, each pet and their needs are unique, so pay attention to your pet's individual preferences and comfort levels when engaging in stress-relieving activities. <span className="font-bold">Your bond with your pet is a powerful source of comfort and support</span>, so embrace and nurture it to foster a harmonious and stress-free relationship.</p>
+              <p className="font-light leading-7 lg:max-w-lg">{content.bondText.paragraph} <span className="font-bold">{content.bondText.span}</span>{content.bondText.paragraphContinue}</p>
             </div>
 
             <h4 className="font-bold text-3xl uppercase tracking-wider">stay <span className="text-sky-darker">paw</span>sitive!</h4>
