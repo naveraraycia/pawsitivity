@@ -55,8 +55,6 @@ html {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
-/* Hero Brand*/
-
 .yellow-highlight-text {
   background: linear-gradient(to bottom, transparent 50%, #f5ff81 50%);
 }
@@ -78,7 +76,8 @@ html {
 }
 
 .hero-btn:hover,
-.lang-btn:hover {
+.lang-btn:hover,
+.blue-box:hover {
   box-shadow: none;
   transform: translate(10px, 10px);
 }
