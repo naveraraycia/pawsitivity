@@ -5,6 +5,10 @@
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;600;700;800&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hamburger Menu */
 .hamburger {
   cursor: pointer;
@@ -52,31 +56,34 @@
 }
 
 /* Hero Brand*/
-#hero-brand {
+
+.yellow-highlight-text {
   background: linear-gradient(to bottom, transparent 50%, #f5ff81 50%);
 }
 
-#information-heading {
+.blue-highlight-text {
   background: linear-gradient(to bottom, transparent 50%, #80e8ff 50%);
 }
 
-#banner-heading {
+.pink-highlight-text {
   background: linear-gradient(to bottom, transparent 50%, #fce6e6 50%);
 }
 
-#tips-heading {
+.lavender-highlight-text {
   background: linear-gradient(to bottom, transparent 50%, #e7cee3 50%);
 }
 
-#hero-btn {
+.hero-btn {
   box-shadow: 10px 10px 0px 1px #308fbc;
 }
 
-#hero-btn:hover {
+.hero-btn:hover,
+.lang-btn:hover {
   box-shadow: none;
   transform: translate(10px, 10px);
 }
 
-.blue-box {
+.blue-box,
+.lang-btn {
   box-shadow: 10px 10px 0px 1px #80e8ff;
 }
