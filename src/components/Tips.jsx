@@ -8,7 +8,7 @@ function Tips() {
   return (
     <>
          <div className="flex flex-col mt-20 space-y-10 xl:space-y-0 xl:space-x-5 xl:flex-row">
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="150">
               <Card height='full'>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[0].title}</h4>
@@ -16,7 +16,7 @@ function Tips() {
                 </div>
               </Card>
             </div>
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="350">
               <Card height={'full'}>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[1].title}</h4>
@@ -24,7 +24,7 @@ function Tips() {
                 </div>
               </Card>
             </div>
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="550">
               <Card height={'full'}>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[2].title}</h4>
@@ -35,7 +35,7 @@ function Tips() {
           </div>
 
           <div className="flex flex-col mt-5 space-y-10 xl:space-y-0 xl:space-x-5 xl:flex-row">
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="750">
               <Card height='full'>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[3].title}</h4>
@@ -43,7 +43,7 @@ function Tips() {
                 </div>
               </Card>
             </div>
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="950">
               <Card height={'full'}>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[4].title}</h4>
@@ -51,7 +51,7 @@ function Tips() {
                 </div>
               </Card>
             </div>
-            <div className="xl:w-1/3">
+            <div className="xl:w-1/3" data-aos="fade-up" data-aos-delay="1150">
               <Card height={'full'}>
                 <div className="space-y-5 xl:text-xs">
                   <h4 className="font-semibold text-lg tracking-tight">{tips[5].title}</h4>

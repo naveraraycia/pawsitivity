@@ -12,20 +12,24 @@ function Information() {
   return (
     <>
       <div className="flex flex-col space-y-10 justify-center items-center mt-14 lg:mt-24 lg:flex-row lg:space-y-0 lg:space-x-28">
-            <img src={gingerCat} alt="cat" className="w-[250px] xl:w-[340px] lg:block" />
+            <img data-aos="fade-right" data-aos-delay="150" src={gingerCat} alt="cat" className="w-[250px] xl:w-[340px] lg:block" />
 
             <div className="space-y-10">
-              <Card shadow={'blue'}>
-                {content.informationText.textBlocks[0]}
-              </Card>
-              <Card shadow={'blue'}>
-              {content.informationText.textBlocks[1]}
-              </Card>
+              <div data-aos="fade-left" data-aos-delay="400">
+                <Card shadow={'blue'}>
+                  {content.informationText.textBlocks[0]}
+                </Card>
+              </div>
+              <div data-aos="fade-left" data-aos-delay="600">
+                <Card shadow={'blue'}>
+                {content.informationText.textBlocks[1]}
+                </Card>
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col space-y-10 mt-10 lg:space-y-0 lg:mt-52 lg:flex-row lg:space-x-10">
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/3" data-aos="fade-right" data-aos-delay="150">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={blueCat} alt="cat" className="rounded-full w-[100px]" />
@@ -34,7 +38,7 @@ function Information() {
               </div>
             </Card>
             </div>
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/3"  data-aos="fade-right" data-aos-delay="400">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={pug} alt="cat" className="rounded-full w-[100px] bg-cover bg-center" />
@@ -43,7 +47,7 @@ function Information() {
               </div>
             </Card>
             </div>
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/3"  data-aos="fade-right" data-aos-delay="600">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={greenDog} alt="cat" className="rounded-full w-[100px] bg-cover bg-center" />

@@ -1,5 +1,7 @@
-import { useRef, useContext } from "react";
+import { useRef, useContext, useEffect } from "react";
 import LanguageContext from "./context/languageContext";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 import Navbar from "./components/Navbar";
 import Tips from "./components/Tips";
 import Footer from "./components/Footer";
@@ -21,6 +23,13 @@ function App() {
   let heroRemainingText = content.heroText.heading.split(' ')
   heroRemainingText.shift()
   heroRemainingText = `${heroRemainingText[0]} ${heroRemainingText[1]} ${heroRemainingText[2]}`
+
+  useEffect(()=> {
+    Aos.init({
+      duration: 600,
+      once: true
+    })
+  })
   
   return (
     <>
@@ -29,7 +38,7 @@ function App() {
         <Navbar />
 
         <div className="flex font-sans justify-between py-16 mx-12 md:mx-40 md:space-x-10">
-          <div className="flex flex-col space-y-5">
+          <div data-aos="zoom-in" className="flex flex-col space-y-5">
             <div className="space-y-8 md:space-y-10">
               <div className="space-y-3">
                 <div className="font-bold text-4xl text-sky-darker md:text-5xl md:space-y-1">
@@ -50,7 +59,7 @@ function App() {
             </div>
           </div>
           
-          <img src={heroImg} alt="hero" className="hidden lg:w-[450px] lg:block" />
+          <img data-aos="zoom-in" data-aos-delay="400" src={heroImg} alt="hero" className="hidden lg:w-[450px] lg:block" />
         </div>
       </section>
 
@@ -69,10 +78,10 @@ function App() {
 
             <Heading text={content.bannerText.heading} highlight={'pink'} size={'2xl'} smEnabled={true} smSize={'4xl'} />
 
-            <p className="font-light max-w-lg text-md md:text-lg">{content.bannerText.paragraph}</p>
+            <p  data-aos="zoom-in" data-aos-delay="200" className="font-light max-w-lg text-md md:text-lg">{content.bannerText.paragraph}</p>
           </div>
 
-          <img src={kittens} alt="kittens" className="hidden lg:w-[300px] lg:block xl:w-[350px]" />
+          <img  data-aos="zoom-in" data-aos-delay="600" src={kittens} alt="kittens" className="hidden lg:w-[300px] lg:block xl:w-[350px]" />
 
         </div>
       </section>
@@ -89,9 +98,9 @@ function App() {
 
       <section id="bond" className="bg-pastel-yellow">
         <div className="flex flex-col font-sans text-slate py-32 px-12 space-y-10 justify-center items-center lg:flex-row  lg:space-y-0 lg:space-x-20">
-          <img src={dogOcean} alt="dog bond" className="w-[800px]  lg:w-[600px] lg:rounded-none" />
+          <img data-aos="fade-right" data-aos-delay="150" src={dogOcean} alt="dog bond" className="w-[800px]  lg:w-[600px] lg:rounded-none" />
 
-          <div className="flex flex-col space-y-16">
+          <div className="flex flex-col space-y-16" data-aos="fade-left" data-aos-delay="350">
             <div className="space-y-7">
 
               <Heading text={content.bondText.heading} smEnabled={true} smSize={'4xl'} size={'3xl'} highlight={'blue'} />
