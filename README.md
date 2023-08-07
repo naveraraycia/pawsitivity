@@ -5,6 +5,9 @@ Pawsitivity is a website that shows information about human and pet wellness ava
 ### Demo
 Pawsitivity is live [here](https://pawsitivity.vercel.app/)
 
+### Figma Design
+Check out the mockup [here](https://www.figma.com/file/5HuXtQtQar70PEF2xIapMG/Pawsitivity---ReactJS-Project-Multi-language-project-(Context-API)?type=design&mode=design&t=qpT87XLr9gukHJfp-1)
+
 ## Technologies Used
 The website is built with the following technologies:
 - React JS
