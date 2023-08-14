@@ -37,7 +37,7 @@ function App() {
       <section id="hero" className="bg-sky">
         <Navbar />
 
-        <div className="flex font-sans justify-between py-16 mx-12 md:mx-40 md:space-x-10">
+        <div className="flex font-sans px-5 justify-between max-w-6xl mx-auto w-full py-16 md:space-x-10">
           <div data-aos="zoom-in" className="flex flex-col space-y-5">
             <div className="space-y-8 md:space-y-10">
               <div className="space-y-3">
@@ -64,7 +64,7 @@ function App() {
       </section>
 
       <section id="information" className="bg-lighter-pink">
-        <div className="text-center py-32 mx-12 md:mx-40">
+        <div className="text-center py-32 px-5 max-w-6xl mx-auto w-full">
           <Heading text={content.informationText.heading} size={'4xl'} smEnabled={true} smSize={'5xl'} highlight={'blue'} />
 
           <Information />
@@ -73,7 +73,7 @@ function App() {
       </section>
 
       <section id="banner" className="bg-lavender">
-        <div className="py-32 font-sans text-slate mx-12 md:mx-40 flex justify-between items-center">
+        <div className="py-32 font-sans text-slate px-5 mx-auto w-full max-w-6xl flex justify-between items-center">
           <div className="space-y-10">
 
             <Heading text={content.bannerText.heading} highlight={'pink'} size={'2xl'} smEnabled={true} smSize={'4xl'} />
@@ -87,7 +87,7 @@ function App() {
       </section>
 
       <section id="tips" className="bg-lighter-pink">
-        <div ref={elementRef} className="py-32 font-sans flex flex-col items-center text-slate mx-12 md:mx-40">
+        <div ref={elementRef} className="py-32 font-sans flex flex-col items-center text-slate px-5 mx-auto w-full max-w-6xl">
 
           <Heading text={content.tipsText.heading} size={'3xl'} smEnabled={true} smSize={'4xl'} highlight={'lavender'} />
        
@@ -97,7 +97,7 @@ function App() {
       </section>
 
       <section id="bond" className="bg-pastel-yellow">
-        <div className="flex flex-col font-sans text-slate py-32 px-12 space-y-10 justify-center items-center lg:flex-row  lg:space-y-0 lg:space-x-20">
+        <div className="flex flex-col font-sans text-slate py-32 space-y-10 justify-center px-5 mx-auto w-full max-w-6xl items-center lg:flex-row lg:space-y-0 lg:space-x-20">
           <img data-aos="fade-right" data-aos-delay="150" src={dogOcean} alt="dog bond" className="w-[800px]  lg:w-[600px] lg:rounded-none" />
 
           <div className="flex flex-col space-y-16" data-aos="fade-left" data-aos-delay="350">

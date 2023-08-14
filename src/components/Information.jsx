@@ -28,8 +28,8 @@ function Information() {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-10 mt-10 lg:space-y-0 lg:mt-52 lg:flex-row lg:space-x-10">
-            <div className="lg:w-1/3" data-aos="fade-right" data-aos-delay="150">
+          <div className="grid grid-cols-1 gap-10 mt-10 lg:grid-cols-3 lg:mt-48">
+            <div className="mx-auto" data-aos="fade-right" data-aos-delay="150">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={blueCat} alt="cat" className="rounded-full w-[100px]" />
@@ -38,7 +38,7 @@ function Information() {
               </div>
             </Card>
             </div>
-            <div className="lg:w-1/3"  data-aos="fade-right" data-aos-delay="400">
+            <div className="mx-auto"  data-aos="fade-right" data-aos-delay="400">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={pug} alt="cat" className="rounded-full w-[100px] bg-cover bg-center" />
@@ -47,7 +47,7 @@ function Information() {
               </div>
             </Card>
             </div>
-            <div className="lg:w-1/3"  data-aos="fade-right" data-aos-delay="600">
+            <div className="mx-auto"  data-aos="fade-right" data-aos-delay="600">
             <Card shadow={'blue'} height={'full'}>
               <div className="space-y-5 flex flex-col items-center">
                 <img src={greenDog} alt="cat" className="rounded-full w-[100px] bg-cover bg-center" />
